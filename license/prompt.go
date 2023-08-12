@@ -1,9 +1,9 @@
 package license
 
 import (
+	"embed"
 	"encoding/json"
 	"fmt"
-	"os"
 	"strconv"
 	"time"
 
@@ -64,9 +64,12 @@ func RunPrompt() (Result, error) {
 	}, nil
 }
 
+//go:embed "licenses.json"
+var f embed.FS
+
 func GetLicenseList() []string {
-	// Open the JSON file
-	file, err := os.Open("./license/licenses.json")
+	// Open the JSON file from embed
+	file, err := f.Open("licenses.json")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return nil

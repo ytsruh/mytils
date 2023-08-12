@@ -1,22 +1,31 @@
 package license
 
 import (
+	"embed"
 	"fmt"
 	"os"
 	"text/template"
 )
 
-func GenTemplate(input Result) error {
-	tmplFile := fmt.Sprintf("license/templates/%s.txt", input.License)
+//go:embed templates/*
+var embeddedTemplates embed.FS
 
-	// Open a file for writing
-	file, err := os.Create("LICENSE.txt")
+func GenTemplate(input Result) error {
+	tmplFile := fmt.Sprintf("templates/%s.txt", input.License)
+
+	// Get current working directory & create a new file for writing
+	dir, err := os.Getwd()
+	if err != nil {
+		return err
+	}
+
+	file, err := os.Create(dir + "/LICENSE.txt")
 	if err != nil {
 		return err
 	}
 	defer file.Close()
 
-	tmpl, err := template.ParseFiles(tmplFile)
+	tmpl, err := template.ParseFS(embeddedTemplates, tmplFile)
 	if err != nil {
 		return err
 	}
