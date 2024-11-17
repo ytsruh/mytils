@@ -1,4 +1,4 @@
-module ytsruh.com/license-gen
+module ytsruh.com/my
 
 go 1.20
 

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"ytsruh.com/license-gen/license"
+	"ytsruh.com/my/license"
 )
 
 func main() {
