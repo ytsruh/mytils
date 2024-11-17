@@ -1,11 +1,13 @@
 # My Utils
 
-A collection of CLI utilities.
+A collection of CLI utilities built using Go.
 
-## Packages
+## Packages / Commands
 
-### License
+### License (license)
 
-A CLI tool to help a developer quickly add a license to their project. Built using Go.
+Quickly add a license to their project by following a simple prompt.
 
-### Cheat Sheet
+### Tmux (tmux)
+
+A cheat sheet of commands for Tmux.
