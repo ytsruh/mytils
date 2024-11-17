@@ -6,6 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 	"ytsruh.com/my/license"
+	"ytsruh.com/my/tmux"
 )
 
 var licenseCmd = &cobra.Command{
@@ -35,6 +36,6 @@ var tmuxCmd = &cobra.Command{
 	Short: "A tmux cheat sheet",
 	Long:  `A list of commands for Tmux in a cheat sheet format.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("A list of commands for Tmux in a cheat sheet format. \n")
+		tmux.Run()
 	},
 }
