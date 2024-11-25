@@ -6,6 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 	"ytsruh.com/my/license"
+	"ytsruh.com/my/pomo"
 	"ytsruh.com/my/tmux"
 )
 
@@ -37,5 +38,17 @@ var tmuxCmd = &cobra.Command{
 	Long:  `A list of commands for Tmux in a cheat sheet format.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		tmux.Run()
+	},
+}
+
+var pomoCmd = &cobra.Command{
+	Use:     "pomo",
+	Aliases: []string{"pomodoro", "timer"},
+	Short:   "A pomodoro timer",
+	Long:    `A pomodoro timer to help you stay focused on your work.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		// Can ignore error as default value of 25 minutes is set
+		timeout, _ := cmd.Flags().GetDuration("time")
+		pomo.Run(timeout)
 	},
 }

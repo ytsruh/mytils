@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/spf13/cobra"
 )
@@ -31,9 +32,10 @@ func init() {
 	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.my.yaml)")
 
 	// Cobra also supports local flags, which will only run when this action is called directly.
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	pomoCmd.Flags().DurationP("time", "t", 25*time.Minute, "Pomodoro timer duration")
 
 	// Add subcommands
 	rootCmd.AddCommand(licenseCmd)
 	rootCmd.AddCommand(tmuxCmd)
+	rootCmd.AddCommand(pomoCmd)
 }
