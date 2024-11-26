@@ -33,9 +33,12 @@ func init() {
 
 	// Cobra also supports local flags, which will only run when this action is called directly.
 	pomoCmd.Flags().DurationP("time", "t", 25*time.Minute, "Pomodoro timer duration")
+	pwdCmd.Flags().IntP("length", "l", 16, "Password length")
+	pwdCmd.Flags().BoolP("encoded", "e", false, "return a URL-safe, base64 encoded password")
 
 	// Add subcommands
 	rootCmd.AddCommand(licenseCmd)
 	rootCmd.AddCommand(tmuxCmd)
 	rootCmd.AddCommand(pomoCmd)
+	rootCmd.AddCommand(pwdCmd)
 }
