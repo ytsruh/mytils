@@ -13,7 +13,7 @@ var rootCmd = &cobra.Command{
 	Use:   "my",
 	Short: "A collection of CLI utilities packaged together to make your life easier & customise your computer.",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("Please choose a sub command to run\n")
+		fmt.Printf("\n" + "Please choose a sub command to run\n" + "\n")
 	},
 }
 

@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"ytsruh.com/my/license"
-	"ytsruh.com/my/pomo"
-	"ytsruh.com/my/tmux"
+	"ytsruh.com/my/pkg/license"
+	"ytsruh.com/my/pkg/pomo"
+	"ytsruh.com/my/pkg/tmux"
 )
 
 var licenseCmd = &cobra.Command{
