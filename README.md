@@ -1,6 +1,6 @@
-# My Utils
+# Mytils
 
-A collection of CLI utilities built using Go, Cobra and Charm/Bubbletea
+My Utilities. A collection of CLI utilities built using Go, Cobra and Charm/Bubbletea
 
 ## Packages / Commands
 
