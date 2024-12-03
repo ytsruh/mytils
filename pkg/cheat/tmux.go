@@ -1,17 +1,18 @@
-package tmux
+package cheat
 
 import "github.com/charmbracelet/bubbles/table"
 
-var columns = []table.Column{
+var tmuxColumns = []table.Column{
 	{Title: "Description", Width: 30},
 	{Title: "Command", Width: 30},
 }
 
-var rows = []table.Row{
+var tmuxRows = []table.Row{
 	{"Start a new session", "tmux"},
 	{"Start a new named session", "tmux new -s [name]"},
 	{"List tmux sessions", "tmux ls"},
 	{"Detach from current session", "tmux d"},
+	{"Detach from current session", "ctrl+b, d"},
 	{"Rename current session", "tmux $"},
 	{"Show all tmux", "tmux info"},
 	{"Command mode", "ctrl+b, :"},

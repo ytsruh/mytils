@@ -41,4 +41,5 @@ func init() {
 	rootCmd.AddCommand(tmuxCmd)
 	rootCmd.AddCommand(pomoCmd)
 	rootCmd.AddCommand(pwdCmd)
+	rootCmd.AddCommand(nvimCmd)
 }
