@@ -75,3 +75,13 @@ var nvimCmd = &cobra.Command{
 		cheat.RunNvim()
 	},
 }
+
+var terminalCmd = &cobra.Command{
+	Use:     "terminal",
+	Aliases: []string{"term", "bash"},
+	Short:   "A terminal cheat sheet",
+	Long:    `A list of commands for the terminal in a cheat sheet format.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		cheat.RunTerminal()
+	},
+}

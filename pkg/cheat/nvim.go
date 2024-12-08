@@ -28,3 +28,7 @@ var nvimRows = []table.Row{
 	{"Visual", "Copy/yank one word", "yw"},
 	{"Visual", "Paste", "p"},
 }
+
+func RunNvim() {
+	run(nvimColumns, nvimRows)
+}

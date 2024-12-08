@@ -26,3 +26,7 @@ var tmuxRows = []table.Row{
 	{"Switch pane", "ctrl+b, [up/down/left/right]"},
 	{"Show pane numbers", "ctrl+b, q"},
 }
+
+func RunTmux() {
+	run(tmuxColumns, tmuxRows)
+}

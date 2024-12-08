@@ -42,4 +42,5 @@ func init() {
 	rootCmd.AddCommand(pomoCmd)
 	rootCmd.AddCommand(pwdCmd)
 	rootCmd.AddCommand(nvimCmd)
+	rootCmd.AddCommand(terminalCmd)
 }

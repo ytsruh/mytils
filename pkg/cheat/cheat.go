@@ -59,11 +59,3 @@ func run(columns []table.Column, rows []table.Row) {
 		os.Exit(1)
 	}
 }
-
-func RunTmux() {
-	run(tmuxColumns, tmuxRows)
-}
-
-func RunNvim() {
-	run(nvimColumns, nvimRows)
-}
