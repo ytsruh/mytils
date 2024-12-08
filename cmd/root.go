@@ -43,4 +43,5 @@ func init() {
 	rootCmd.AddCommand(pwdCmd)
 	rootCmd.AddCommand(nvimCmd)
 	rootCmd.AddCommand(terminalCmd)
+	rootCmd.AddCommand(gitCmd)
 }

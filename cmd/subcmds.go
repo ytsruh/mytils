@@ -85,3 +85,13 @@ var terminalCmd = &cobra.Command{
 		cheat.RunTerminal()
 	},
 }
+
+var gitCmd = &cobra.Command{
+	Use:     "git",
+	Aliases: []string{"github", "gh"},
+	Short:   "A git cheat sheet",
+	Long:    `A list of commands for git in a cheat sheet format.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		cheat.RunGit()
+	},
+}
