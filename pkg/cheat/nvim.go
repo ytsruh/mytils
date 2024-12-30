@@ -23,6 +23,7 @@ var nvimRows = []table.Row{
 	{"Command", "Save and quit", ":wq"},
 	{"Command", "Save", ":w"},
 	{"Command", "Save as", ":w [filename]"},
+	{"Command", "LSP Help", ":help lsp"},
 	{"Visual", "Select text", "<move cursor>"},
 	{"Visual", "Copy/yank", "y"},
 	{"Visual", "Copy/yank one word", "yw"},
