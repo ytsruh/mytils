@@ -5,10 +5,10 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+	"ytsruh.com/my/pkg/cheat"
 	"ytsruh.com/my/pkg/license"
 	"ytsruh.com/my/pkg/password"
 	"ytsruh.com/my/pkg/pomo"
-	"ytsruh.com/my/pkg/tmux"
 )
 
 var licenseCmd = &cobra.Command{
@@ -35,7 +35,7 @@ var tmuxCmd = &cobra.Command{
 	Short: "A tmux cheat sheet",
 	Long:  `A list of commands for Tmux in a cheat sheet format.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		tmux.Run()
+		cheat.RunTmux()
 	},
 }
 
@@ -63,5 +63,35 @@ var pwdCmd = &cobra.Command{
 		// Run the password generator
 		pwd := password.Run(length, enc)
 		fmt.Println("\n" + pwd + "\n")
+	},
+}
+
+var nvimCmd = &cobra.Command{
+	Use:     "nvim",
+	Aliases: []string{"vim", "neovim"},
+	Short:   "A neovim cheat sheet",
+	Long:    `A list of commands for Neovim in a cheat sheet format.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		cheat.RunNvim()
+	},
+}
+
+var terminalCmd = &cobra.Command{
+	Use:     "terminal",
+	Aliases: []string{"term", "bash"},
+	Short:   "A terminal cheat sheet",
+	Long:    `A list of commands for the terminal in a cheat sheet format.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		cheat.RunTerminal()
+	},
+}
+
+var gitCmd = &cobra.Command{
+	Use:     "git",
+	Aliases: []string{"github", "gh"},
+	Short:   "A git cheat sheet",
+	Long:    `A list of commands for git in a cheat sheet format.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		cheat.RunGit()
 	},
 }

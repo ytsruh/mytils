@@ -1,4 +1,4 @@
-package tmux
+package cheat
 
 import (
 	"fmt"
@@ -36,7 +36,7 @@ func (m model) View() string {
 	return baseStyle.Render(m.table.View()) + "\n  "
 }
 
-func Run() {
+func run(columns []table.Column, rows []table.Row) {
 	t := table.New(
 		table.WithColumns(columns),
 		table.WithRows(rows),
