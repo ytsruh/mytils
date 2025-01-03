@@ -35,6 +35,7 @@ func init() {
 	pomoCmd.Flags().DurationP("time", "t", 25*time.Minute, "Pomodoro timer duration")
 	pwdCmd.Flags().IntP("length", "l", 16, "Password length")
 	pwdCmd.Flags().BoolP("encoded", "e", false, "return a URL-safe, base64 encoded password")
+	viewCmd.Flags().StringP("file", "f", "", "File to view")
 
 	// Add subcommands
 	rootCmd.AddCommand(licenseCmd)
@@ -44,4 +45,5 @@ func init() {
 	rootCmd.AddCommand(nvimCmd)
 	rootCmd.AddCommand(terminalCmd)
 	rootCmd.AddCommand(gitCmd)
+	rootCmd.AddCommand(viewCmd)
 }

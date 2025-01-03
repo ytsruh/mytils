@@ -9,6 +9,7 @@ import (
 	"ytsruh.com/my/pkg/license"
 	"ytsruh.com/my/pkg/password"
 	"ytsruh.com/my/pkg/pomo"
+	"ytsruh.com/my/pkg/view"
 )
 
 var licenseCmd = &cobra.Command{
@@ -93,5 +94,25 @@ var gitCmd = &cobra.Command{
 	Long:    `A list of commands for git in a cheat sheet format.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		cheat.RunGit()
+	},
+}
+
+var viewCmd = &cobra.Command{
+	Use:     "view",
+	Aliases: []string{"open", "show"},
+	Short:   "View or open a file",
+	Long:    `A quick view of opening a file in the terminal.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		fileName, err := cmd.Flags().GetString("file")
+		if err != nil {
+			fmt.Printf("Error: %v\n", err)
+			return
+		}
+		if fileName == "" {
+			fmt.Println("Please provide a file to view")
+			fmt.Println("-- eg. my view -f <file>")
+			return
+		}
+		view.Run(fileName)
 	},
 }
