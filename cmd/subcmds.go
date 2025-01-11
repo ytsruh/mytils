@@ -116,3 +116,13 @@ var viewCmd = &cobra.Command{
 		view.Run(fileName)
 	},
 }
+
+var ghosttyCmd = &cobra.Command{
+	Use:     "ghostty",
+	Aliases: []string{"ghost"},
+	Short:   "A cheat sheet for ghostty, the terminal emulator",
+	Long:    `A list of commands for the ghostty terminal.`,
+	Run: func(cmd *cobra.Command, args []string) {
+		cheat.RunGhostty()
+	},
+}

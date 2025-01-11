@@ -23,6 +23,10 @@ var terminalRows = []table.Row{
 	{"Check Processes", "ps"},
 	{"Kill Process", "kill [PID]"},
 	{"Kill Process", "pkill [process name]"},
+	{"List homebrew", "brew ls"},
+	{"Update homebrew", "brew update"},
+	{"Upgrade homebrew packages", "brew upgrade"},
+	{"Upgrade homebrew package", "brew upgrade [package]"},
 }
 
 func RunTerminal() {

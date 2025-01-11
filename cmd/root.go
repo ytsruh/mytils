@@ -46,4 +46,5 @@ func init() {
 	rootCmd.AddCommand(terminalCmd)
 	rootCmd.AddCommand(gitCmd)
 	rootCmd.AddCommand(viewCmd)
+	rootCmd.AddCommand(ghosttyCmd)
 }
