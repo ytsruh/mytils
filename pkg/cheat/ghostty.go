@@ -13,6 +13,7 @@ var ghosttyRows = []table.Row{
 	{"Reload Config", "shift + cmd + ,"},
 	{"Split pane right", "cmd + d"},
 	{"Split pane down", "shift + cmd + d"},
+	{"Change pane left/right", "opt + command + [arrow key]"},
 	{"Close pane", "cmd + w"},
 }
 
